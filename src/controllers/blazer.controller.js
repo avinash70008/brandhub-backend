@@ -14,6 +14,26 @@ router.post("", async (req, res) => {
   }
 });
 
+router.post("", async (req, res) => {
+  try {
+    const blazer = await Blazer.create(req.body);
+    return res.status(200).send(blazer);
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+});
+
+
+router.post("/cart", async (req, res) => {
+  try {
+    const blazer = await Blazer.create(req.body);
+    return res.status(200).send(blazer);
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+});
+
+
 
 //---------------route get--------------
 

@@ -30,6 +30,8 @@ app.use("/jeans" , jeansController)
 
 const blazerController = require("./controllers/blazer.controller")
 app.use("/blazer" , blazerController)
+const cartController = require("./controllers/cart")
+app.use("/cart" , cartController)
 
 
 
