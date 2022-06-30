@@ -32,10 +32,15 @@ const blazerController = require("./controllers/blazer.controller")
 app.use("/blazer" , blazerController)
 const cartController = require("./controllers/cart")
 app.use("/cart" , cartController)
+const address = require("./controllers/shippingAddress")
+app.use("",address)
 
 
 
-const {register,login} = require("./controllers/userController")
+
+
+const {register,login} = require("./controllers/userController");
+
 app.post("/register",register)
 app.post("/login",login)
 
