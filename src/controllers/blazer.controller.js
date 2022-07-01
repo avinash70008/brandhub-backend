@@ -27,6 +27,7 @@ router.post("", async (req, res) => {
 router.post("/cart", async (req, res) => {
   try {
     const blazer = await Blazer.create(req.body);
+    console.log(blazer)
     return res.status(200).send(blazer);
   } catch (error) {
     return res.status(500).send(error.message);
